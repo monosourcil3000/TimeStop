@@ -1,9 +1,46 @@
-<!DOCTYPE html> 
-<html>
- <head>
-  <title>Title</title>
-   </head>
-    <body>
-    
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>It was ME</title></title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  #myVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+</style>
+</head>
+<body>
+<video id="myVideo" controls>
+  <source src="https://raw.githubusercontent.com/monosourcil3000/idk/main/warudo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<script>
+
+  var video = document.getElementById("myVideo");
+ 
+video.addEventListener("click", function() {
+  document.documentElement.requestFullscreen().catch(err => console.error(err));
+});
+
+  video.onended = function() {
+    while(1)location.reload(1);
+  };
+
+  
+</script>
+</body>
 </html>
